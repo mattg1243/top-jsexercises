@@ -3,14 +3,12 @@ const palindromes = function (str) {
     let strL = str.toLowerCase();
     let reversed = [];
     let strArr = Array.from(strL.split(''));
-    let strArrCopy = strArr;
     let argLength = strArr.length;
 
-    console.log(strArrCopy);
 
-    for (let i = 0; i < argLength; i++) {
-        let lastChar = strArrCopy.pop();
-        if (lastChar.match(/^[0-9a-z]+$/)) {
+    for (let i = argLength - 1; i >= 0; i--) {
+        let lastChar = strArr[i];
+        if (lastChar.match(/^[0-9a-z]+$/) || lastChar == "") {
             reversed.push(lastChar);
         }
     }
