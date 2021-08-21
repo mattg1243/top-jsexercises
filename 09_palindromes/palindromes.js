@@ -1,6 +1,6 @@
 const palindromes = function (str) {
    
-    let strL = str.toLowerCase();
+    let strL = str.toLowerCase()
     let reversed = [];
     let strArr = Array.from(strL.split(''));
     let argLength = strArr.length;
@@ -8,7 +8,7 @@ const palindromes = function (str) {
 
     for (let i = argLength - 1; i >= 0; i--) {
         let lastChar = strArr[i];
-        if (lastChar.match(/^[0-9a-z]+$/) || lastChar == "") {
+        if (lastChar.match(/^[0-9a-z]+$/) || lastChar.match(" ")) {
             reversed.push(lastChar);
         }
     }
@@ -26,5 +26,5 @@ const palindromes = function (str) {
     return true;
 };
 
-console.log(palindromes('racecar'));
+console.log(palindromes('Animal loots foliated detail of stool lamina.'));
 module.exports = palindromes;
